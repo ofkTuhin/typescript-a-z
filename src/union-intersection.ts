@@ -20,11 +20,11 @@ type i_employe = {
   phone: number;
 };
 
-type i_developer = {
+type i_developer = i_employe & {
   id: number;
 };
 
-const i_member: i_employe & i_developer = {
+const i_member: i_developer = {
   phone: 1,
   name: "tuhin",
   id: 33,
