@@ -33,8 +33,8 @@ const myinfoAbout: GenericInterface<number, boolean> = {
 
 // functionn in Generic type
 
-const genericFuntion = <T>(params: T): T[] => [params];
-genericFuntion(<string>"tuhin");
+const genericFuntion = <X, T>(params2: X, params: T): X[] => [params2];
+genericFuntion(<string>"tuhin", <number>10);
 // touples
 const genericFuntionTuples = <X, Y>(param1: X, param2: Y): [X, Y] => [
   param1,

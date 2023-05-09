@@ -48,3 +48,15 @@ const myInfo = {
   other2: null,
 };
 const result5 = addMeInMyCrushMind(myInfo);
+// generic constrains keyof
+interface B {
+  name: string;
+  phone: number;
+}
+const genericKeyofFunction = <T, B extends keyof T>(parmas: T, key: B) =>
+  console.log(parmas[key]);
+const myself = {
+  name: "John Doe",
+  phone: 19,
+};
+genericKeyofFunction(myself, "name");
