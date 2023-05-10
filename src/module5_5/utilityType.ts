@@ -29,3 +29,8 @@ const developer: Record<Developer, Pick<Employee, "phone" | "address">> = {
     address: "dhaka",
   },
 };
+for (var i = 0; i < 3; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1000 + i);
+}

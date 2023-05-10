@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node-dev --respawn --transpile-only src/module5_5/main.ts"
+    "start": "ts-node-dev --respawn --transpile-only src/practice/array-tuples.ts"
   },
   "keywords": [],
   "author": "",
