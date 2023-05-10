@@ -125,3 +125,40 @@ const getPerson = (person: PersonInfo[], email: string) => {
   }
 };
 console.log(getPerson(personArray, "tuhin@gmail.com"));
+
+// practice problem 6
+// Create a TypeScript program that declares an array of numbers. Use the spread  operator to pass the elements of the array as arguments to a function that finds the minimum and maximum values of the array. Use destructuring to assign the minimum and maximum values to separate variables, and log them to the console.
+
+type ArrrayOfNumber = number[];
+const numberArray: ArrrayOfNumber = [1, 2, 3, 4, 5, 6];
+const getMaxMin = (...arg: number[]): void => {
+  let max = 0;
+  for (let i = 0; i < arg.length; i++) {
+    if (arg[i] > max) {
+      max = arg[i];
+    }
+  }
+  console.log(max);
+
+  let min = arg[0];
+  for (let j = 1; j < arg.length; j++) {
+    if (min > arg[j]) {
+      min = arg[i];
+    }
+  }
+  console.log(min);
+};
+getMaxMin(...numberArray);
+// problem no 8 for practice
+
+type X = "red" | "green" | "blue";
+
+const printString = (arg: X, parameter?: boolean): void => {
+  if (parameter) {
+    console.log(arg.toUpperCase());
+  } else {
+    console.log(arg.toLowerCase());
+  }
+};
+console.log(printString("red", true));
+console.log(printString("green"));
